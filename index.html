@@ -173,7 +173,7 @@
 						// run several fixed-step iterations to approximate varying-step
 						dt = 5;
 						while( timeLeft >= dt ) {
-							var time = 0.3, damping = 0.93, gravity = 0.01, tau = 2 * Math.PI;
+							var time = 0.3, damping = 0.93, gravity = 0.001, tau = 2 * Math.PI;
 							raycaster.ray.origin.copy( motion.position );
 							raycaster.ray.origin.y += birdsEye;
 							var hits = raycaster.intersectObject( platform );
