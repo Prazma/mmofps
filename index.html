@@ -98,7 +98,6 @@
 
 		<div id="container"></div>
 		<div id="info"><span id="informax">welcome to <strong>RECON</strong>.</span><br/><span id="inst">ARROW KEYS: LOOK AROUND | WASD: MOVE | SPACE: JUMP</span></div>
-		<div id="cloud9"></div>
 		<script src="build/3dBase.js"></script>
 		<script>
 			function strtas() {
@@ -403,7 +402,6 @@
 				if( mode == "local" ) {
 					if( localStorage.usernameRecon ) {
 						strtas();
-						document.getElementById("cloud9").innerHTML = '<div class="progress" style="width: 90%;"><div id="playerHP" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">'+localStorage.usernameRecon+'</div></div>';
 					} else {
 						document.getElementById("pie2").style.display = "none";
 						document.getElementById("pie3").style.display = "block";
@@ -413,8 +411,7 @@
 				}
 			}
 			function setAvatar() {
-				localStorage.usernameRecon = document.getElementById("rcon").value;
-				document.getElementById("cloud9").innerHTML = '<div class="progress" style="width: 90%;"><div id="playerHP" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">'+localStorage.usernameRecon+'</div></div>';
+				localStorage.usernameRecon = document.getElementById("rcon").value;				
 				strtas();
 			}
 		</script>
